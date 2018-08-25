@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ben-sso
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+dubbo:
+  registry:
+    id: main-registry
+    address: zookeeper://192.168.78.10:2181
+  application:
+    id: ben-sso
+    name: ben-sso
+server:
+  port: 8081
+#debug: true
+ben:
+  user-service:
+    version: 1.0
+
+

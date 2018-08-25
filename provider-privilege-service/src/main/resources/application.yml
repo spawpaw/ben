@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: provider-privilege-service
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ben?useUnicode=true&useSSL=false&characterEncoding=utf8
+dubbo:
+  registry:
+    id: main-registry
+    address: zookeeper://192.168.78.10:2181
+  application:
+    id: provider-privilege-service
+    name: provider-privilege-service
+  protocol:
+    id: dubbo
+    name: dubbo
+    host: localhost
+    port: 20883
+  scan:
+    base-packages: com.spawpaw.ben.provider.service
+mybatis:
+  mapper-locations: "classpath*:mapper/*.xml"
+#debug: true
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

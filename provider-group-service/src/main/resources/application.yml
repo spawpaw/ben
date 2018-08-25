@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: provider-user-group-service
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ben?useUnicode=true&useSSL=false&characterEncoding=utf8
+dubbo:
+  registry:
+    id: main-registry
+    address: zookeeper://192.168.78.10:2181
+  application:
+    id: provider-user-group-service
+    name: provider-user-group-service
+  protocol:
+    id: dubbo
+    name: dubbo
+    host: localhost
+    port: 20882
+  scan:
+    base-packages: com.spawpaw.ben.provider.service
+mybatis:
+  mapper-locations: "classpath*:mapper/*.xml"
+#debug: true
