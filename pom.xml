@@ -19,7 +19,9 @@
         <module>ben-upms</module>
         <module>provider-user-service</module>
         <module>provider-group-service</module>
+        <module>provider-privilege-service</module>
         <module>dubbo-admin</module>
+        <module>ben-rest-api</module>
     </modules>
     <properties>
         <spring-boot-starter.mybatis.version>1.3.2</spring-boot-starter.mybatis.version>
