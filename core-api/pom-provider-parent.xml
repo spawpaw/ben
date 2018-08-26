@@ -7,13 +7,13 @@
     <packaging>pom</packaging>
 
     <name>provider-base</name>
-    <description>Base pom for Providers</description>
+    <description>Base pom for providers</description>
 
     <parent>
         <groupId>com.spawpaw.ben</groupId>
         <artifactId>ben-parent</artifactId>
         <version>1.0</version>
-        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <dependencies>
