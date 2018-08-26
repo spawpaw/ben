@@ -1,2 +1,23 @@
 server:
   port: 23303
+spring:
+  application:
+    name: ben-rest-service
+  redis:
+    host: redis.appx.host
+    port: 6379
+    database: 0
+dubbo:
+  registry:
+    id: main-registry
+    address: zookeeper://zookeeper.appx.host:2181
+  application:
+    id: ben-rest-service
+    name: ben-rest-service
+ben:
+  user-service:
+    version: 1.0
+  group-service:
+    version: 1.0
+  privilege-service:
+    version: 1.0

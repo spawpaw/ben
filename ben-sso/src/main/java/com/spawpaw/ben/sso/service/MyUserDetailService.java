@@ -27,11 +27,11 @@ public class MyUserDetailService implements UserDetailsService {
             registry = "main-registry"
     )
     UserService userService;
-    @Reference(version = "${ben.user-service.version}",
+    @Reference(version = "${ben.group-service.version}",
             registry = "main-registry"
     )
     GroupService groupService;
-    @Reference(version = "${ben.user-service.version}",
+    @Reference(version = "${ben.privilege-service.version}",
             registry = "main-registry"
     )
     UserPrivilegeService userPrivilegeService;

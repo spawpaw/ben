@@ -18,5 +18,7 @@ server:
 ben:
   user-service:
     version: 1.0
-
-
+  group-service:
+    version: 1.0
+  privilege-service:
+    version: 1.0
