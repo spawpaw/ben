@@ -11,7 +11,7 @@
 
     <parent>
         <groupId>com.spawpaw.ben</groupId>
-        <artifactId>be</artifactId>
+        <artifactId>consumer-base</artifactId>
         <version>1.0</version>
         <relativePath>../core-api/pom-consumer-parent.xml</relativePath>
     </parent>

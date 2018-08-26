@@ -2,18 +2,18 @@ spring:
   application:
     name: ben-sso
   redis:
-    host: localhost
+    host: redis.appx.host
     port: 6379
     database: 0
 dubbo:
   registry:
     id: main-registry
-    address: zookeeper://192.168.78.10:2181
+    address: zookeeper://zookeeper.appx.host:2181
   application:
     id: ben-sso
     name: ben-sso
 server:
-  port: 8081
+  port: 23301
 #debug: true
 ben:
   user-service:

@@ -6,13 +6,14 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
+@SpringBootApplication
 //@EnableAutoConfiguration
 @EnableDubboConfig
 @EnableDubbo
-@SpringBootApplication
-public class ProviderPrivilegeServiceApplication {
+public class ProviderGroupService {
+
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ProviderPrivilegeServiceApplication.class)
+        new SpringApplicationBuilder(ProviderGroupService.class)
                 .web(WebApplicationType.NONE)
                 .build()
                 .run(args);
