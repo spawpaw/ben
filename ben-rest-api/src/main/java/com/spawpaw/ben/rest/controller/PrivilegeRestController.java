@@ -7,14 +7,11 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import java.util.List;
 
 /**
- * 用户组实体相关的API
- *
- * @author BenBenShang spawpaw@hotmail.com
- * @since v1.0.0
+ * 权限实体相关的API
  */
 @RestController
-@RequestMapping("group")
-public class GroupRestController {
+@RequestMapping("privilege")
+public class PrivilegeRestController {
     @GetMapping("")
     List<User> getList(
             @RequestParam(value = "page", required = false, defaultValue = "1") Long page
@@ -37,4 +34,5 @@ public class GroupRestController {
     void deleteById(@PathVariable("id") Long id) {
         throw new NotImplementedException();
     }
+
 }

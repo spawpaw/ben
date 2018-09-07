@@ -6,36 +6,48 @@ import com.spawpaw.ben.api.service.GroupService;
 import com.spawpaw.ben.api.service.UserPrivilegeService;
 import com.spawpaw.ben.api.service.UserService;
 import com.spawpaw.ben.api.util.PageInfo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 
 /**
- * Created By spawpaw@hotmail.com  2018-08-26
+ * 用户实体相关的API
  *
  * @author BenBenShang spawpaw@hotmail.com
+ * @since v1.0.0
  */
 @RestController
 @RequestMapping("user")
 public class UserRestController {
-    @Reference(version = "${ben.user-service.version}",
-            registry = "main-registry"
-    )
+    @Reference(version = "${ben.user-service.version}", registry = "main-registry")
     UserService userService;
-    @Reference(version = "${ben.group-service.version}",
-            registry = "main-registry"
-    )
+    @Reference(version = "${ben.group-service.version}", registry = "main-registry")
     GroupService groupService;
-    @Reference(version = "${ben.privilege-service.version}",
-            registry = "main-registry"
-    )
+    @Reference(version = "${ben.privilege-service.version}", registry = "main-registry")
     UserPrivilegeService userPrivilegeService;
 
     @GetMapping("")
-    List<User> getUserList(@RequestParam("page") Long page, @RequestParam("pageSize") Long pageSize) {
+    List<User> getList(
+            @RequestParam(value = "page", required = false, defaultValue = "1") Long page
+            , @RequestParam(value = "pageSize", required = false, defaultValue = "20") Long pageSize
+    ) {
         return userService.findAllUsers(new PageInfo(page, pageSize));
     }
+
+    @PostMapping("")
+    User create() {
+        throw new NotImplementedException();
+    }
+
+    @PutMapping("")
+    User update() {
+        throw new NotImplementedException();
+    }
+
+    @DeleteMapping("/{id}")
+    void deleteById(@PathVariable("id") Long id) {
+        throw new NotImplementedException();
+    }
+
 }
