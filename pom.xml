@@ -16,7 +16,6 @@
     <modules>
         <module>core-api</module>
         <module>ben-sso</module>
-        <module>ben-upms</module>
         <module>provider-user-service</module>
         <module>provider-group-service</module>
         <module>provider-privilege-service</module>
@@ -29,9 +28,15 @@
         <dubbo.version>2.6.2</dubbo.version>
         <dubbo.spring-boot.actuator.version>0.2.0</dubbo.spring-boot.actuator.version>
         <curator-framework.version>2.12.0</curator-framework.version>
+        <mybatis-page-helper.version>5.1.4</mybatis-page-helper.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${mybatis-page-helper.version}</version>
+            </dependency>
             <!--mybatis-spring-boot-starter-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
