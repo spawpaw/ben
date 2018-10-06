@@ -6,4 +6,4 @@ eureka:
     fetch-registry: false
 spring:
   application:
-    name: discovery-center
+    name: cloud-discovery-eureka
