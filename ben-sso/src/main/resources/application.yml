@@ -5,6 +5,8 @@ spring:
     host: redis.appx.host
     port: 6379
     database: 0
+  thymeleaf:
+    cache: false
 dubbo:
   registry:
     id: main-registry

@@ -5,69 +5,50 @@
     <artifactId>ben-parent</artifactId>
 
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <name>ben-parent</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <version>2.0.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modules>
+        <module>cloud-discovery-eureka</module>
+        <module>cloud-monitor-admin</module>
+        <module>cloud-gateway-zuul</module>
+
         <module>core-api</module>
         <module>ben-sso</module>
-        <module>provider-user-service</module>
-        <module>provider-group-service</module>
-        <module>provider-privilege-service</module>
-        <module>dubbo-admin</module>
-        <module>ben-rest-api</module>
+        <module>service-upms</module>
     </modules>
     <properties>
-        <spring-boot-starter.mybatis.version>1.3.2</spring-boot-starter.mybatis.version>
-        <spring-boot-starter.actuator.version>2.0.4.RELEASE</spring-boot-starter.actuator.version>
-        <dubbo.version>2.6.2</dubbo.version>
-        <dubbo.spring-boot.actuator.version>0.2.0</dubbo.spring-boot.actuator.version>
-        <curator-framework.version>2.12.0</curator-framework.version>
-        <mybatis-page-helper.version>5.1.4</mybatis-page-helper.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+        <spring-boot-admin.version>2.0.2</spring-boot-admin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${mybatis-page-helper.version}</version>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot-admin.version}</version>
             </dependency>
-            <!--mybatis-spring-boot-starter-->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${spring-boot-starter.mybatis.version}</version>
-            </dependency>
-            <!--dubbo-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <!--spring-boot-starter-actuator-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring-boot-starter.actuator.version}</version>
-            </dependency>
-            <!--dubbo-spring-boot-actuator-->
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>dubbo-spring-boot-actuator</artifactId>
-                <version>${dubbo.spring-boot.actuator.version}</version>
-            </dependency>
-            <!--curator-framework-->
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-                <version>${curator-framework.version}</version>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot-admin.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--core-api-->
             <dependency>
                 <groupId>${project.groupId}</groupId>

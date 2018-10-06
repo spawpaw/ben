@@ -43,9 +43,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/browser/index.html#/")
-                .failureUrl("/login?error")
+                .failureUrl("/login-error")
+                .defaultSuccessUrl("/index")
                 .permitAll() //登录页面用户任意访问
+
 
                 .and().headers().frameOptions().sameOrigin()//允许同源frame
 

@@ -3,14 +3,33 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>core-api</artifactId>
-    <name>ben-api</name>
+    <name>core-api</name>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
     <parent>
         <groupId>com.spawpaw.ben</groupId>
         <artifactId>ben-parent</artifactId>
-        <version>1.0</version>
+        <version>1.0.0</version>
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
