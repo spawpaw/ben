@@ -8,10 +8,6 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://mysql.appx.host:3306/ben?useUnicode=true&useSSL=false&characterEncoding=utf8
-  boot:
-    admin:
-      client:
-        url: "http://sba.appx.host:8081"
 debug: false
 eureka:
   client:
