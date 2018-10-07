@@ -1,7 +1,12 @@
 # 犇
 
-本项目旨在打造一个基于分布式架构的企业级开发解决方案。  
-目前本项目处于设计筹备阶段，暂不对外开放。
+现阶段主要搭建基本的微服务架构，完善最基础的用户管理和鉴权（服务调用服务，客户端调用服务）。
+
+
+## 使用技术
+spring cloud全家桶
+
+
 
 ## 模块划分
 
@@ -9,7 +14,7 @@
     - `cloud-discovery-eureka` `:8761`: *服务发现：注册中心(eureka)
     - `cloud-monitor-admin` `:8081`: *服务发现：服务监控中心(spring-boot-admin)
     - `cloud-gateway-zuul` `:8080`: *服务网关(zuul)
-    - `cloud-config` `:8080`: 分布式配置中心(spring-cloud-config)
+    - `cloud-config` `:8082`: 分布式配置中心(spring-cloud-config)
 - `core-api`: 项目核心依赖。提供常用功能封装、关系对象模型、接口定义等  
 - `service-*` `:222**`: 微服务provider，具体描述请看`core-api`模块下的同名接口定义。这里设置不同的端口号仅为了方便单机测试，实际部署时不需要。
     - `service-upms-*` `:2220*`: 用户系统
