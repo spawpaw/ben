@@ -1,0 +1,27 @@
+server:
+  port: 8762
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.appx.host:8761/eureka/
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #Git仓库位置。
+          uri: https://github.com/spawpaw/ben.git
+          #配置仓库路径下的相对搜索位置，可以配置多个。
+          searchPaths: cloud-config-asset
+          #配置仓库的分支
+          label: master
+          #访问 Git 仓库的用户名。
+#          username: username
+          #访问 Git 仓库的用户密码。
+#          password: password
+          ###如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
