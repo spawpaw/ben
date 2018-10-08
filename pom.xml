@@ -17,6 +17,7 @@
         <module>cloud-discovery-eureka</module>
         <module>cloud-monitor-admin</module>
         <module>cloud-gateway-zuul</module>
+        <module>cloud-config-scc</module>
 
         <module>core-api</module>
         <module>ben-sso</module>

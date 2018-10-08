@@ -7,14 +7,17 @@
 spring cloud全家桶
 
 
+## 依赖管理
+所有依赖的版本均声明在项目根目录的pom.xml中。方便统一的管理。
+如果有某些具有相似依赖的模块（如service-provider），则抽象出一个公共的pom文件，放在core-api目录下
 
 ## 模块划分
 
 - `cloud-*` `:8***`: 基础
     - `cloud-discovery-eureka` `:8761`: *服务发现：注册中心(eureka)
+    - `cloud-config-scc` `:8762`: 分布式配置中心(spring-cloud-config)
     - `cloud-monitor-admin` `:8081`: *服务发现：服务监控中心(spring-boot-admin)
     - `cloud-gateway-zuul` `:8080`: *服务网关(zuul)
-    - `cloud-config` `:8082`: 分布式配置中心(spring-cloud-config)
 - `core-api`: 项目核心依赖。提供常用功能封装、关系对象模型、接口定义等  
 - `service-*` `:222**`: 微服务provider，具体描述请看`core-api`模块下的同名接口定义。这里设置不同的端口号仅为了方便单机测试，实际部署时不需要。
     - `service-upms-*` `:2220*`: 用户系统
@@ -40,8 +43,12 @@ spring cloud全家桶
 ## 开发环境配置
 为了在初次开发时，为了避免修改所有模块配置文件的麻烦，请直接按照按照如下要求配置开发环境
 ### 端口号
-在安装如下软件时，请将端口号设定为指定值。  
-redis port: 6379
+在安装如下软件时，请将端口号设定为指定值（一般为默认值）。  
+
+|中间件|端口号|
+|:---:|:---:|
+|redis|6379|
+
 
 ### host
 请将如下的记录添加到hosts中，并将ip地址改成您实际使用的ip地址
