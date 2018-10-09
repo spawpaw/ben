@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.appx.host:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+zuul:
+  routes:
+    user-service:
+      path: /**
+      serviceId: service-upms
+server:
+  port: 8080
+spring:
+  application:
+    name: cloud-gateway-zuul
