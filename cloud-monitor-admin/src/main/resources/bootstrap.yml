@@ -1,12 +1,8 @@
 spring:
   application:
-    name: service-upms
+    name: cloud-monitor-sba
   cloud:
     config:
       discovery:
         enabled: true
         serviceId: cloud-config-scc
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka.appx.host:8761/eureka/
