@@ -1,20 +1,11 @@
-
+server:
+  port: 23100
 spring:
-  application:
-    name: service-upms
-
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
     url: jdbc:mysql://mysql.appx.host:3306/ben?useUnicode=true&useSSL=false&characterEncoding=utf8
-debug: false
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka.appx.host:8761/eureka/
-server:
-  port: 23100
 management:
   endpoints:
     web:
