@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableAdminServer
-public class CloudSpringBootAdminApplication {
+public class CloudSpringBootAdmin {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudSpringBootAdminApplication.class, args);
+        SpringApplication.run(CloudSpringBootAdmin.class, args);
     }
 }
