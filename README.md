@@ -82,3 +82,6 @@ spring cloud全家桶
 
 ### 密码
 MysSQL：用户名`root`密码`123456`
+
+### 支持
+git服务器：http://git.appx.host:8081/

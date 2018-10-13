@@ -1,9 +1,5 @@
 server:
   port: 8762
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka.appx.host:8761/eureka/
 spring:
   application:
     name: cloud-config-scc
@@ -11,9 +7,13 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/spawpaw/ben.git
+          uri: http://git.appx.host:8081/spawpaw/ben-config.git
           searchPaths: cloud-config-asset
           default-label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.appx.host:8761/eureka/
 management:
   endpoints:
     web:
