@@ -13,14 +13,14 @@ spring cloud全家桶
 
 ## 模块划分
 
-- `cloud-*` `:8***`: 基础
-    - `cloud-discovery-eureka` `:8761`: *服务发现：注册中心(eureka)
+- `cloud-*` `:8***`: 核心服务，必须先于其他服务启动
+    - `cloud-discovery-eureka` `:8761`: 服务发现：注册中心(eureka)
     - `cloud-config-scc` `:8762`: 分布式配置中心(spring-cloud-config)
-    - `cloud-monitor-admin` `:8081`: *服务发现：服务监控中心(spring-boot-admin)
-    - `cloud-gateway-zuul` `:8080`: *服务网关(zuul)
+    - `cloud-monitor-admin` `:8081`: 服务发现：服务监控中心(spring-boot-admin)
+    - `cloud-gateway-zuul` `:8080`: 服务网关(zuul)
 - `core-api`: 项目核心依赖。提供常用功能封装、关系对象模型、接口定义等  
 - `service-*` `:222**`: 微服务provider，具体描述请看`core-api`模块下的同名接口定义。这里设置不同的端口号仅为了方便单机测试，实际部署时不需要。
-    - `service-upms-*` `:2220*`: 用户系统
+    - `service-upms-*` `:2220*`: 用户系统，整合RBAC权限模型
         - `service-upms-user` `:22201`: 用户服务
         - `service-upms-role` `:22202`: 用户组服务(用户角色)
         - `service-upms-privilege` `:22203`: 用户权限服务
