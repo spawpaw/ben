@@ -1,4 +1,4 @@
-package com.spawpaw.ben.provider;
+package com.spawpaw.ben.upms;
 
 import com.spawpaw.ben.api.service.upms.*;
 import org.springframework.boot.SpringApplication;
@@ -16,11 +16,11 @@ import org.springframework.context.annotation.ComponentScan;
         RoleHasPrivilegeService.class,
         UserHasRoleService.class,
 })
-@ComponentScan(basePackages = "com.spawpaw.ben.provider.service")
+@ComponentScan(basePackages = "com.spawpaw.ben.upms.service")
 @EnableDiscoveryClient
-public class UpmsUserService {
+public class ServiceUserPermissionManagementSystem {
     public static void main(String[] args) {
         SpringApplication
-                .run(UpmsUserService.class, args);
+                .run(ServiceUserPermissionManagementSystem.class, args);
     }
 }

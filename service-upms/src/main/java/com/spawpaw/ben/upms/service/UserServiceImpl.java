@@ -1,10 +1,10 @@
-package com.spawpaw.ben.provider.service;
+package com.spawpaw.ben.upms.service;
 
 import com.spawpaw.ben.api.base.BaseEntityServiceImpl;
 import com.spawpaw.ben.api.entity.upms.User;
 import com.spawpaw.ben.api.exception.ServiceException;
 import com.spawpaw.ben.api.service.upms.UserService;
-import com.spawpaw.ben.provider.repository.UserRepository;
+import com.spawpaw.ben.upms.repository.UserRepository;
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.spawpaw.ben.provider.repository;
+package com.spawpaw.ben.upms.repository;
 
 import com.spawpaw.ben.api.entity.upms.Role;
 import com.spawpaw.ben.api.entity.upms.User;

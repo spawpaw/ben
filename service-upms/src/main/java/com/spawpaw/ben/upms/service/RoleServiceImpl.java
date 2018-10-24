@@ -1,9 +1,9 @@
-package com.spawpaw.ben.provider.service;
+package com.spawpaw.ben.upms.service;
 
 import com.spawpaw.ben.api.base.BaseEntityServiceImpl;
 import com.spawpaw.ben.api.entity.upms.Role;
 import com.spawpaw.ben.api.service.upms.RoleService;
-import com.spawpaw.ben.provider.repository.RoleRepository;
+import com.spawpaw.ben.upms.repository.RoleRepository;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
