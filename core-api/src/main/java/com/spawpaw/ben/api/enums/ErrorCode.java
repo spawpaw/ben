@@ -1,13 +1,43 @@
 package com.spawpaw.ben.api.enums;
 
-/**
- * Created By spawpaw@hotmail.com  2018-08-24
- *
- * @author BenBenShang spawpaw@hotmail.com
- */
-public class ErrorCode {
+public enum ErrorCode {
+    ERR_ILLIGAL_ARGUMENT(400, "参数错误"),
 
+    ERR_INTERAL_SERVER_ERROR(500, "内部错误");
 
-    public static final int ERR_NO_ID_WHEN_UPDATING_DATA = 401;
-    public static final int ERR_OLD_PASSWORD_IS_NOT_EQUALS_TO_CURRENT_IN_DATABASE = 401;
+    /**
+     * 错误代码
+     */
+    private int code;
+    /**
+     * 用于展现给客户的信息
+     */
+    private String msg;
+
+    /**
+     * @param code 错误代码
+     * @param msg  用于展现给客户的信息
+     */
+    ErrorCode(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public ErrorCode setCode(int code) {
+        this.code = code;
+        return this;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public ErrorCode setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
 }
