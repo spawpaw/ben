@@ -19,8 +19,7 @@ public class ServiceException extends RuntimeException {
      * @param messageForDeveloper 留给开发人员看的错误提示
      */
     public ServiceException(ErrorCode codeEnum, String messageForDeveloper) {
-        this.codeEnum = codeEnum;
-        this.messageForDeveloper = messageForDeveloper;
+        this(codeEnum, codeEnum.getMsg(), messageForDeveloper);
     }
 
     /**
