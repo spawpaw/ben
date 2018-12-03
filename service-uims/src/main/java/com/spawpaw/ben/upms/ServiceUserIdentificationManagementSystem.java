@@ -1,6 +1,6 @@
 package com.spawpaw.ben.upms;
 
-import com.spawpaw.ben.api.service.upms.*;
+import com.spawpaw.ben.api.service.uims.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -18,9 +18,9 @@ import org.springframework.context.annotation.ComponentScan;
 })
 @ComponentScan(basePackages = "com.spawpaw.ben.upms.service")
 @EnableDiscoveryClient
-public class ServiceUserPermissionManagementSystem {
+public class ServiceUserIdentificationManagementSystem {
     public static void main(String[] args) {
         SpringApplication
-                .run(ServiceUserPermissionManagementSystem.class, args);
+                .run(ServiceUserIdentificationManagementSystem.class, args);
     }
 }

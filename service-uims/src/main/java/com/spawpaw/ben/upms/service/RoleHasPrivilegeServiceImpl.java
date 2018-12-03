@@ -4,7 +4,7 @@ import com.spawpaw.ben.api.entity.upms.Privilege;
 import com.spawpaw.ben.api.entity.upms.Role;
 import com.spawpaw.ben.api.entity.upms.RoleHasPrivilege;
 import com.spawpaw.ben.api.entity.upms.RoleHasPrivilegePK;
-import com.spawpaw.ben.api.service.upms.RoleHasPrivilegeService;
+import com.spawpaw.ben.api.service.uims.RoleHasPrivilegeService;
 import com.spawpaw.ben.upms.repository.RoleHasPrivilegeRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;

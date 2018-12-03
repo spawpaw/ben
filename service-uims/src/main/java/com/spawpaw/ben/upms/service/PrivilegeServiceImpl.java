@@ -2,7 +2,7 @@ package com.spawpaw.ben.upms.service;
 
 import com.spawpaw.ben.api.base.BaseEntityServiceImpl;
 import com.spawpaw.ben.api.entity.upms.Privilege;
-import com.spawpaw.ben.api.service.upms.PrivilegeService;
+import com.spawpaw.ben.api.service.uims.PrivilegeService;
 import com.spawpaw.ben.upms.repository.PrivilegeRepository;
 import org.springframework.stereotype.Component;
 

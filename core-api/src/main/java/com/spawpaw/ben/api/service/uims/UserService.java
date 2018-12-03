@@ -1,4 +1,4 @@
-package com.spawpaw.ben.api.service.upms;
+package com.spawpaw.ben.api.service.uims;
 
 import com.spawpaw.ben.api.base.BaseEntityService;
 import com.spawpaw.ben.api.entity.upms.User;
