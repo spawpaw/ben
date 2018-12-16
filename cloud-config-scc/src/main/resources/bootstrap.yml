@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: http://git.appx.host:8081/spawpaw/ben-config.git
+          uri: http://git.neko.chat/spawpaw/ben-config.git
           searchPaths: cloud-config-asset
           default-label: master
 eureka:
